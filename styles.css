@@ -1,0 +1,223 @@
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== TIPOGRAFÍA ====== */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: #034641;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p, li, a {
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ====== HEADER ====== */
+header {
+  background-color: #f2f2f2;
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* ====== MENÚ ====== */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #0b9388;
+}
+
+nav ul li a.active {
+  color: #8e3198;
+  border-bottom: 2px solid #ba4ab8;
+}
+
+/* ====== SECCIONES ====== */
+section {
+  padding: 40px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+/* ====== SERVICIOS ====== */
+.servicios {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  width: 200px;
+  background-color: #f9f9f9;
+}
+
+.card img {
+  border-radius: 8px;
+}
+
+/* ====== PAQUETES ====== */
+#paquetes {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#paquetes h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.paquetes-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.paquete {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.paquete:hover {
+  transform: translateY(-5px);
+}
+
+.paquete img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.paquete h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #077c80;
+}
+
+.paquete p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ====== FORMULARIO ====== */
+form {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input,
+form textarea,
+form button {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+/* ====== PIE DE PÁGINA ====== */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+/* ====== RESPONSIVO ====== */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .paquetes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
