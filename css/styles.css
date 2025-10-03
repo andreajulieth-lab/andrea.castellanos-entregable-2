@@ -89,26 +89,46 @@ img {
   border-radius: 8px;
 }
 
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 15px;        /* espacio entre fotos */
+  margin: 20px 0;
+}
+
+.galeria img {
+  width: 100%;
+  height: 200px;    /* alto fijo */
+  object-fit: cover;/* recorta la imagen sin deformarla */
+  border-radius: 10px;
+}
+
 /* ====== SERVICIOS ====== */
 .servicios {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .card {
   border: 1px solid #ddd;
   padding: 15px;
-  text-align: center;
   border-radius: 10px;
-  width: 200px;
   background-color: #f9f9f9;
+  transition: transform 0.3s ease;
 }
 
 .card img {
   border-radius: 8px;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
 
 /* ====== PAQUETES ====== */
 #paquetes {
@@ -124,10 +144,9 @@ img {
 }
 
 .paquetes-container {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columnas flexibles */
   gap: 30px;
-  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -137,7 +156,6 @@ img {
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
-  max-width: 300px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
@@ -165,31 +183,54 @@ img {
   color: #555;
 }
 
+
 /* ====== FORMULARIO ====== */
 form {
-  max-width: 300px;
-  margin: 0 auto;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 form input,
-form textarea,
-form button {
-  padding: 10px;
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
   border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #0b9388;
+  box-shadow: 0 0 6px rgba(11, 147, 136, 0.4);
 }
 
 form button {
-  background-color: #333;
-  color: white;
+  padding: 12px;
+  background: #02312e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
   border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-  background-color: #555;
+  background: #077c70;
+  transform: scale(1.05);
 }
 
 /* ====== PIE DE PÁGINA ====== */
