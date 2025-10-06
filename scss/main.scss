@@ -1,0 +1,22 @@
+// main.scss
+
+// ====== UTILIDADES ======
+@use 'utils/variables';
+@use 'utils/mixins';
+@use 'utils/extends';
+
+// ====== BASE ======
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/globals';
+
+// ====== COMPONENTES ======
+@use 'components/header';
+@use 'components/cards';
+@use 'components/form';
+@use 'components/footer';
+
+// ====== LAYOUT ======
+@use 'layout/sections';
+@use 'layout/grid';
+@use 'layout/responsive';
